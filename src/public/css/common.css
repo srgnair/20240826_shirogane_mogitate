@@ -1,0 +1,11 @@
+header{
+    height: 50px;
+    margin: 10px 20px;
+    background-color: white;
+}
+
+img{
+    max-height: 100%;
+    width: auto;
+    display: block;
+}

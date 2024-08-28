@@ -1,0 +1,146 @@
+.container{
+    background-color: #f8f8f8;
+}
+
+.detail{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.detail__top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail__top--img{
+    width: 50%;
+}
+
+.detail__top--img img{
+    width: 100%;
+}
+
+.checkbox-wrapper{
+    display: flex;
+}
+
+.detail__top--form-wrapper{
+    width: 50%;
+    margin-left: 30px;
+}
+
+.detail__top--form p,.detail__top--select p,.detail__description p{
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+.detail__top--form input{
+    font-size: 14px;
+    padding: 15px 10px;
+    margin: 0 0 15px;
+    border: #E0DFDE 0.5px solid;
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+    outline: none;
+    width: 100%;
+}
+
+.detail__top--select label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.detail__top--select input[type="checkbox"] {
+    display: none; /* デフォルトのチェックボックスを非表示にする */
+}
+
+.custom-checkbox {
+    width: 20px; /* ラジオボタンのサイズを調整 */
+    height: 20px; /* ラジオボタンのサイズを調整 */
+    border-radius: 50%; /* 丸くする */
+    border: 1px solid #333; /* ラジオボタンの枠線の色 */
+    display: inline-block;
+    margin-right: 5px; /* ラベルとラジオボタンの間隔を調整 */
+    position: relative;
+    vertical-align: middle;
+}
+
+.detail__top--select input[type="checkbox"]:checked + label .custom-checkbox {
+    background-color: #333; /* 選択時の背景色 */
+}
+
+.detail__top--select input[type="checkbox"]:checked + label .custom-checkbox::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 7px; /* チェックマークのサイズ */
+    height: 12px; /* チェックマークのサイズ */
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.detail__file{
+    margin-bottom: 30px;
+}
+
+.detail__description textarea{
+    width: 100%;
+    min-height: 150px;
+    font-size: 14px;
+    outline: none;
+    padding: 10px;
+}
+
+.detail__button{
+    display: flex;
+    justify-content: center;
+}
+
+.back-button, .register-button{
+    width: 100%;
+}
+
+.back-button{
+    margin-right: 15px;
+    text-align: right;
+}
+
+.register-button{
+    margin-left: 15px;
+    text-align: left;
+}
+
+.back-button button{
+background-color: #E0DFDE;
+}
+
+.register-button button{
+ background-color: #f5c800;
+}
+
+.back-button button, .register-button button {
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin: 10px 0 20px;
+    display: inline-block;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);   
+    width: 50%;
+}
+
+input::placeholder, .detail__description textarea::placeholder{
+    font-size: 18px;
+    color: #E0DFDE;
+}

@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListController;
+use App\Http\Controllers\DetailController;
+use App\Http\Controllers\UpdateController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/products', [ListController::class, 'listView'])->name('listView');
+// Route::get('/products/{:productId}', [DetailController::class, 'detailView'])->name('detailView');
+Route::get('/products/detail', [DetailController::class, 'detailView'])->name('detailView');
+Route::get('/products/register', [RegisterController::class, 'registerView'])->name('registerView');
