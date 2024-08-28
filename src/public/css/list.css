@@ -1,0 +1,167 @@
+.list{
+    padding: 15px 35px;
+    background-color: #f8f8f8;
+}
+
+.list__title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__title h1{
+    font-size: 28px;
+}
+
+.list__title button{
+    border: none;
+    outline: none;
+    margin: 15px 0;
+    padding: 0 15px;
+    background: #FFA929;
+    display: inline-block;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.list__main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__main--sort{
+    width: 20%;
+}
+
+.list__main--cards{
+    width: 80%;
+    padding-left: 40px;
+    display: flex;
+    flex-wrap: wrap; /* カードが折り返すようにする */
+    gap: 20px; /* カード間のスペースを調整 */
+}
+
+.list__main--sort input,.list__main--sort input:focus{
+    font-size: 20px;
+    padding: 15px 10px;
+    margin: 10px 0;
+    border: #E0DFDE 0.5px solid;
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    outline: none;
+    width: 100%;
+}
+
+.list__main--sort input::placeholder {
+    
+    font-size: 18px;
+}
+
+.list__main--sort button{
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin: 10px 0 20px;
+    background: #F5C800;
+    display: inline-block;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);   
+    width: 100%;
+}
+
+.list__main--sort p{
+    font-size: 20px;
+}
+
+.list__main--sort select{
+    font-size: 20px;
+    padding: 15px 10px;
+    border: #E0DFDE 0.5px solid;
+    color: #E0DFDE;
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;   
+}
+
+select option{
+    color: black;
+}
+
+select option[disabled] {
+    color: #E0DFDE;
+}
+
+hr{
+    border: 0;
+    border-top: 1px solid #E0DFDE;
+    margin: 20px 0;
+}
+
+.cards__card{
+    flex: 0 1 calc(33.333% - 20px); /* カードの幅を固定 */
+    box-sizing: border-box; /* パディングやボーダーを含めた幅計算 */
+    max-height: 240px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+}
+
+.cards__card--footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.cards__card--img img {
+    width: 100%;
+}
+
+.list__pagination{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.list__pagination--left{
+    width: 20%;
+}
+
+.list__pagination--right{
+    width: 80%;
+    display: flex;
+    justify-content: center; /* 横方向の中央寄せ */
+    align-items: center; /* 縦方向の中央寄せ */
+    height: 100%; /* 必要に応じて高さを設定 */
+    text-align: center; /* テキストの中央揃え（念のため） */
+}
+
+.pagination{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    border: none;
+}
+
+.pagination li {
+    margin: 0 10px;
+}
+
+.pagination a{
+    text-decoration: none;
+    color: #4B4B4B;
+}
