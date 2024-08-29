@@ -29,3 +29,4 @@ Route::post('/products/register', [RegisterController::class, 'register'])->name
 
 Route::get('/products/{productId}', [DetailController::class, 'detailView'])->name('detailView');
 Route::post('/products/{productId}', [DetailController::class, 'update'])->name('update');
+Route::delete('/products/{productId}/delete', [DetailController::class, 'delete'])->name('delete');

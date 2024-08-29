@@ -4,6 +4,7 @@
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/detail.css') }}">
+<script src="https://kit.fontawesome.com/ada21263c2.js" crossorigin="anonymous"></script>
 @endsection
 @section('content')
 
@@ -85,6 +86,13 @@
                 </div>
             </div>
         </form>
+        <div class="register__trash">
+            <form action="{{ route('delete', ['productId' => $product->id])}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit"><i class="fa-regular fa-trash-can fa-2xl" style="color: red;"></i></button>
+            </form>
+        </div>
     </div>
 </div>
 

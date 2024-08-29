@@ -148,3 +148,21 @@ input::placeholder, .detail__description textarea::placeholder{
 .error-message{
     color: red;
 }
+
+.register__trash button{
+    border: none;
+    outline: none;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.register__trash{
+    position: relative;
+    display: inline-block;
+}
+
+.register__trash button{
+    position: absolute; /* 絶対位置を設定 */
+    top: -70px; /* 必要に応じて調整 */
+    left: 620px;
+}
