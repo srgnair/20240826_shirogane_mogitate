@@ -28,3 +28,4 @@ Route::get('/products/register', [RegisterController::class, 'registerView'])->n
 Route::post('/products/register', [RegisterController::class, 'register'])->name('register');
 
 Route::get('/products/{productId}', [DetailController::class, 'detailView'])->name('detailView');
+Route::post('/products/{productId}', [DetailController::class, 'update'])->name('update');
