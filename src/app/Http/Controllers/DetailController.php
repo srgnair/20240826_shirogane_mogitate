@@ -28,4 +28,12 @@ class DetailController extends Controller
 
         return redirect()->route('detailView', compact('productId'));
     }
+
+    public function delete(Request $request, $productId)
+    {
+        $product = Product::findOrFail($productId);
+        $product->delete();
+
+        return redirect()->route('listView');
+    }
 }
