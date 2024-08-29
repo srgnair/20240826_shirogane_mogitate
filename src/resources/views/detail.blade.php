@@ -1,6 +1,6 @@
 @extends('common')
 @section('title')
-<title>商品一覧ページ</title>
+<title>商品詳細ページ</title>
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/detail.css') }}">
@@ -10,20 +10,20 @@
 <div class="container">
     <div class="detail">
         <div class="detail__map">
-            商品一覧＞キウイ
+            商品一覧＞{{$product->name}}
         </div>
         <div class="detail__top">
             <div class="detail__top--img">
-                <img src="{{ asset('storage/images/kiwi.png') }}" alt="">
+                <img src="{{ asset('storage/images/' . $product->image) }}" alt="">
             </div>
             <div class="detail__top--form-wrapper">
                 <div class="detail__top--form">
                     <p>商品名</p>
-                    <input type="text" name="name" placeholder="商品名を入力">
+                    <input type="text" name="name" placeholder="商品名を入力" value="{{$product->name}}">
                 </div>
                 <div class="detail__top--form">
                     <p>値段</p>
-                    <input type="number" name="price" placeholder="値段を入力">
+                    <input type="number" name="price" placeholder="値段を入力" value="{{$product->price}}">
                 </div>
                 <div class="detail__top--select">
                     <p>季節</p>
@@ -45,13 +45,15 @@
         </div>
         <div class="detail__description">
             <p>商品説明</p>
-            <textarea name="description" placeholder="商品の説明を入力"></textarea>
+            <textarea name="description" placeholder="商品の説明を入力">{{$product->description}}</textarea>
         </div>
         <div class="detail__button">
             <div class="back-button">
-                <button>
-                    戻る
-                </button>
+                <a href="{{ route('listView') }}">
+                    <button>
+                        戻る
+                    </button>
+                </a>
             </div>
             <div class="register-button">
                 <button>

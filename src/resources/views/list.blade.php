@@ -10,9 +10,11 @@
 <div class="list">
     <div class="list__title">
         <h1>商品一覧</h1>
-        <button>
-            ＋ 商品を追加
-        </button>
+        <a href="{{ route('registerView') }}">
+            <button>
+                ＋ 商品を追加
+            </button>
+        </a>
     </div>
     <div class="list__main">
         <div class="list__main--sort">
@@ -29,84 +31,28 @@
             <hr>
         </div>
         <div class="list__main--cards">
-            <div class="cards__card">
+            @foreach($products as $product)
+            <a href="{{ route('detailView',['productId' => $product->id]) }}" class="cards__card">
                 <div class="cards__card--img">
-                    <img src="{{ asset('storage/images/kiwi.png') }}" alt="イメージ画像">
+                    <img src="{{ asset('storage/images/' . $product->image) }}" alt="イメージ画像">
                 </div>
                 <div class="cards__card--footer">
                     <div class="card__footer--name">
-                        キウイ
+                        {{$product->name}}
                     </div>
                     <div class="card__footer--price">
-                        ￥800
+                        {{$product->price}}
                     </div>
                 </div>
-            </div>
-            <div class="cards__card">
-                <div class="cards__card--img">
-                    <img src="{{ asset('storage/images/kiwi.png') }}" alt="イメージ画像">
-                </div>
-                <div class="cards__card--footer">
-                    <div class="card__footer--name">
-                        キウイ
-                    </div>
-                    <div class="card__footer--price">
-                        ￥800
-                    </div>
-                </div>
-            </div>
-            <div class="cards__card">
-                <div class="cards__card--img">
-                    <img src="{{ asset('storage/images/kiwi.png') }}" alt="イメージ画像">
-                </div>
-                <div class="cards__card--footer">
-                    <div class="card__footer--name">
-                        キウイ
-                    </div>
-                    <div class="card__footer--price">
-                        ￥800
-                    </div>
-                </div>
-            </div>
-            <div class="cards__card">
-                <div class="cards__card--img">
-                    <img src="{{ asset('storage/images/kiwi.png') }}" alt="イメージ画像">
-                </div>
-                <div class="cards__card--footer">
-                    <div class="card__footer--name">
-                        キウイ
-                    </div>
-                    <div class="card__footer--price">
-                        ￥800
-                    </div>
-                </div>
-            </div>
-            <div class="cards__card">
-                <div class="cards__card--img">
-                    <img src="{{ asset('storage/images/kiwi.png') }}" alt="イメージ画像">
-                </div>
-                <div class="cards__card--footer">
-                    <div class="card__footer--name">
-                        キウイ
-                    </div>
-                    <div class="card__footer--price">
-                        ￥800
-                    </div>
-                </div>
-            </div>
+            </a>
+            @endforeach
         </div>
     </div>
     <div class="list__pagination">
         <div class="list__patination--left">
         </div>
         <div class="list__pagination--right">
-            <ul class="pagination">
-                <li><a href="#"><</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">></a></li>
-            </ul>
+            {{ $products->links() }}
         </div>
     </div>
 </div>

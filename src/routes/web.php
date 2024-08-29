@@ -22,6 +22,5 @@ Route::get('/', function () {
 });
 
 Route::get('/products', [ListController::class, 'listView'])->name('listView');
-// Route::get('/products/{:productId}', [DetailController::class, 'detailView'])->name('detailView');
-Route::get('/products/detail', [DetailController::class, 'detailView'])->name('detailView');
+Route::get('/products/{productId}', [DetailController::class, 'detailView'])->name('detailView');
 Route::get('/products/register', [RegisterController::class, 'registerView'])->name('registerView');

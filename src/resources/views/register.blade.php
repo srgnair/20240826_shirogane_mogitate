@@ -1,6 +1,6 @@
 @extends('common')
 @section('title')
-<title>商品一覧ページ</title>
+<title>商品登録ページ</title>
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
