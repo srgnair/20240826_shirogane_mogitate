@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class DetailController extends Controller
 {
-    public function detailView()
+    public function detailView($productId)
     {
-        return view('detail');
+        $product = Product::find($productId);
+
+        return view('detail', compact('product'));
     }
 }

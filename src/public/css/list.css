@@ -1,3 +1,7 @@
+a{
+ text-decoration: none;   
+}
+
 .list{
     padding: 15px 35px;
     background-color: #f8f8f8;
@@ -16,7 +20,7 @@
     border: none;
     outline: none;
     margin: 15px 0;
-    padding: 0 15px;
+    padding: 15px;
     background: #FFA929;
     display: inline-block;
     color: black;
@@ -165,3 +169,7 @@ hr{
     text-decoration: none;
     color: #4B4B4B;
 }
+
+svg.w-5.h-5 {
+    width: 30px;
+    height: 30px;  }
