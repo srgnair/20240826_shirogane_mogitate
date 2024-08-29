@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\registerRequest;
+use App\Http\Requests\RegisterRequest;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Season;
@@ -17,7 +17,7 @@ class RegisterController extends Controller
         return view('register', compact('seasons'));
     }
 
-    public function register(registerRequest $request)
+    public function register(RegisterRequest $request)
     {
         // $productData = [
         //     'name' => $request->input('name'),
