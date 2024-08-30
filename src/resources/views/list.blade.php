@@ -18,17 +18,53 @@
     </div>
     <div class="list__main">
         <div class="list__main--sort">
-            <input type="text" placeholder="商品名で検索">
-            <button>
-                検索
-            </button>
-            <p>価格順で表示</p>
-            <select id="sort_by" name="sort_by">
-                <option value="" disabled selected>価格で並び替え</option>
-                <option value="high">高い順に表示</option>
-                <option value="low">低い順に表示</option>
-            </select>
-            <hr>
+            <form action="{{ route('search') }}" method="GET">
+                <input type="text" name="keyword" placeholder="商品名で検索">
+                <button type="submit">
+                    検索
+                </button>
+                <p>価格順で表示</p>
+                <select id="sort_by" name="sort_by">
+                    <option value="" disabled selected>価格で並び替え</option>
+                    <option value="high">高い順に表示</option>
+                    <option value="low">低い順に表示</option>
+                </select>
+                <div class="sort__modal">
+                    @if(request('keyword'))
+                    <form action="{{ route('resetKeyword') }}" method="GET" style="display: inline;">
+                        @if(request('sort_by'))
+                        <input type="hidden" name="sort_by" value="{{ request('sort_by') }}">
+                        @endif
+                        <button>
+                            商品名: {{ request('keyword') }}
+                            <span class="reset-icon">&times;</span>
+                        </button>
+                    </form>
+                    @endif
+                    @if(request('sort_by') == 'high')
+                    <form action="{{ route('resetSort') }}" method="GET" style="display: inline;">
+                        @if(request('keyword'))
+                        <input type="hidden" name="keyword" value="{{ request('keyword') }}">
+                        @endif
+                        <button>
+                            高い順に表示
+                            <span class="reset-icon">&times;</span>
+                        </button>
+                    </form>
+                    @elseif(request('sort_by') == 'low')
+                    <form action="{{ route('resetSort') }}" method="GET" style="display: inline;">
+                        @if(request('keyword'))
+                        <input type="hidden" name="keyword" value="{{ request('keyword') }}">
+                        @endif
+                        <button>
+                            低い順に表示
+                            <span class="reset-icon">&times;</span>
+                        </button>
+                    </form>
+                    @endif
+                </div>
+                <hr>
+            </form>
         </div>
         <div class="list__main--cards">
             @foreach($products as $product)
