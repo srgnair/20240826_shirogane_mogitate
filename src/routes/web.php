@@ -23,10 +23,13 @@ Route::get('/', function () {
 });
 
 Route::get('/products', [ListController::class, 'listView'])->name('listView');
+Route::get('/products/search', [ListController::class, 'search'])->name('search');
+Route::get('/products/search/reset-sort', [ListController::class, 'resetSort'])->name('resetSort');
+Route::get('/products/search/reset-keyword', [ListController::class, 'resetKeyword'])->name('resetKeyword');
 
 Route::get('/products/register', [RegisterController::class, 'registerView'])->name('registerView');
 Route::post('/products/register', [RegisterController::class, 'register'])->name('register');
 
 Route::get('/products/{productId}', [DetailController::class, 'detailView'])->name('detailView');
-Route::post('/products/{productId}', [DetailController::class, 'update'])->name('update');
+Route::post('/products/{productId}/update', [DetailController::class, 'update'])->name('update');
 Route::delete('/products/{productId}/delete', [DetailController::class, 'delete'])->name('delete');

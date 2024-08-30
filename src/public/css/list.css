@@ -1,5 +1,6 @@
 a{
- text-decoration: none;   
+ text-decoration: none;
+ color: black;
 }
 
 .list{
@@ -172,4 +173,33 @@ hr{
 
 svg.w-5.h-5 {
     width: 30px;
-    height: 30px;  }
+    height: 30px;  
+}
+
+.sort__modal{
+    margin-top: 20px;
+}
+
+.sort__modal button {
+    position: relative;
+    padding: 5px 5px 5px 0;
+    width: 50%;
+    font-size: small;
+    font-weight: lighter;
+    background-color: #F8F8F8;
+    color: #313131;
+    border: #f5c800 solid 1px;
+    border-radius: 25px;
+    margin: 5px;
+    cursor: default;
+    box-shadow: none;
+    text-align: senter;
+}
+
+.reset-icon {
+    position: absolute;
+    right: 10px; /* バツ印の位置調整 */
+    color: #f5c800; /* バツ印の色 */
+    font-size: 16px; /* バツ印のサイズ */
+    cursor: pointer; /* カーソルをポインタに変更 */
+}
