@@ -26,7 +26,7 @@ class DetailRequest extends FormRequest
         return [
             'name' => 'required',
             'price' => 'required | integer | min:0 | max:10000',
-            'season' => 'required',
+            'season_ids' => 'required',
             'description' => 'required | max:120',
             'image' => 'required | mimes:jpg,jpeg,png,gif'
         ];
