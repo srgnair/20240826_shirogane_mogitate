@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="detail__file">
-                <input type="file"><br>
+                <input type="file" name="image"><br>
                 @if ($errors->has('image'))
                 @foreach ($errors->get('image') as $error)
                 <span class="error-message">{{ $error }}</span>

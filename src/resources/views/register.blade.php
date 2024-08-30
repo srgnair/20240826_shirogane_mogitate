@@ -17,7 +17,7 @@
             <div class=" register__form--wrapper">
                 <div class="register__form">
                     <p>商品名<span class="required">必須</span></p>
-                    <input type="text" name="name" placeholder="商品名を入力">
+                    <input type="text" name="name" value="{{ old('name') }}" placeholder="商品名を入力">
                     @if ($errors->has('name'))
                     @foreach ($errors->get('name') as $error)
                     <span class="error-message">{{ $error }}</span>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="register__form">
                     <p>値段<span class="required">必須</span></p>
-                    <input type="number" name="price" placeholder="値段を入力">
+                    <input type="number" name="price" value="{{old('price')}}" placeholder="値段を入力">
                     @if ($errors->has('price'))
                     @foreach ($errors->get('price') as $error)
                     <span class="error-message">{{ $error }}</span>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="register__form">
                     <p>商品説明<span class="required">必須</span></p>
-                    <textarea name="description" placeholder="商品の説明を入力"></textarea>
+                    <textarea name="description" placeholder="商品の説明を入力">{{old('description')}}</textarea>
                     @if ($errors->has('description'))
                     @foreach ($errors->get('description') as $error)
                     <span class="error-message">{{ $error }}</span>

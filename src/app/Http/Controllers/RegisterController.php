@@ -19,27 +19,6 @@ class RegisterController extends Controller
 
     public function register(RegisterRequest $request)
     {
-        // $productData = [
-        //     'name' => $request->input('name'),
-        //     'price' => $request->input('price'),
-        //     'description' => $request->input('description'),
-        // ];
-
-        // $image = $request->file('image');
-        // $extension = $image->getClientOriginalExtension();
-        // $filename = uniqid() . '.' . $extension;
-        // $path = Storage::putFileAs('public/images/', $image, $filename);
-
-        // dd($path);
-
-        // $productData['image'] = 'public/images/' . $filename;
-
-        // $newProduct = Product::create($productData);
-
-        // $newProduct->seasons()->attach($request->input('season_ids'));
-
-        // return redirect()->route('registerView');
-
         $productData = [
             'name' => $request->input('name'),
             'price' => $request->input('price'),
@@ -50,11 +29,10 @@ class RegisterController extends Controller
         $extension = $image->getClientOriginalExtension();
         $filename = uniqid() . '.' . $extension;
 
-        // 直接public/imagesディレクトリに保存
-        $destinationPath = public_path('images');
+        $destinationPath = storage_path('app/public/images');
         $image->move($destinationPath, $filename);
 
-        $productData['image'] = 'images/' . $filename;
+        $productData['image'] = $filename;
 
         $newProduct = Product::create($productData);
 
