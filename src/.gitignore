@@ -15,4 +15,4 @@ yarn-error.log
 /.idea
 /.vscode
 mysql/data/
-!src/storage/app/public/images/
+!storage/app/public/images/
