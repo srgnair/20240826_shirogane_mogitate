@@ -69,14 +69,18 @@ DB_PORT=3306
 
 
 ## 使用技術（実行環境）
-- Laravel 9.52.16
-- nginx 1.21.1
-- php 8.0.2
-- mysql 8.0.26
+- **Laravel**: 9.52.16
+- **nginx**: 1.21.1
+- **php**: 8.0.2
+- **mysql**: 8.0.26
+- **ディスプレイ解像度**:1920×1080
+- **ブラウザ**: Google Chrome
+- **OS**: Windows 11
+- **その他**: ブラウザのズームレベルは100%でテストしています。
 
 ## ER図
 ![ER](https://github.com/user-attachments/assets/fe0ad44d-2d27-40cc-9e8a-27d37c01520a)
 
 
 ## URL
-- 環境開発:`http://localhost/`
+- 環境開発:`http://localhost/products`
