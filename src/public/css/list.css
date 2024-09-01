@@ -46,8 +46,8 @@ a{
     width: 80%;
     padding-left: 40px;
     display: flex;
-    flex-wrap: wrap; /* カードが折り返すようにする */
-    gap: 20px; /* カード間のスペースを調整 */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .list__main--sort input,.list__main--sort input:focus{
@@ -114,8 +114,8 @@ hr{
 }
 
 .cards__card{
-    flex: 0 1 calc(33.333% - 20px); /* カードの幅を固定 */
-    box-sizing: border-box; /* パディングやボーダーを含めた幅計算 */
+    flex: 0 1 calc(33.333% - 20px);
+    box-sizing: border-box;
     max-height: 240px;
     border-radius: 5px;
     background-color: white;
@@ -149,10 +149,10 @@ hr{
 .list__pagination--right{
     width: 80%;
     display: flex;
-    justify-content: center; /* 横方向の中央寄せ */
-    align-items: center; /* 縦方向の中央寄せ */
-    height: 100%; /* 必要に応じて高さを設定 */
-    text-align: center; /* テキストの中央揃え（念のため） */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
 }
 
 .pagination{
@@ -176,11 +176,11 @@ svg.w-5.h-5 {
     height: 30px;  
 }
 
-.sort__modal{
+.modal{
     margin-top: 20px;
 }
 
-.sort__modal button {
+.modal button {
     position: relative;
     padding: 5px 5px 5px 0;
     width: 50%;
@@ -196,10 +196,10 @@ svg.w-5.h-5 {
     text-align: senter;
 }
 
-.reset-icon {
+.modal__reset-icon {
     position: absolute;
-    right: 10px; /* バツ印の位置調整 */
-    color: #f5c800; /* バツ印の色 */
-    font-size: 16px; /* バツ印のサイズ */
-    cursor: pointer; /* カーソルをポインタに変更 */
+    right: 10px;
+    color: #f5c800;
+    font-size: 16px;
+    cursor: pointer;
 }

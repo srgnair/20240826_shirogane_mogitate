@@ -20,7 +20,7 @@
                     <input type="text" name="name" value="{{ old('name') }}" placeholder="商品名を入力">
                     @if ($errors->has('name'))
                     @foreach ($errors->get('name') as $error)
-                    <span class="error-message">{{ $error }}</span>
+                    <span class="register__form--error-message">{{ $error }}</span>
                     @endforeach
                     @endif
                 </div>
@@ -29,7 +29,7 @@
                     <input type="number" name="price" value="{{old('price')}}" placeholder="値段を入力">
                     @if ($errors->has('price'))
                     @foreach ($errors->get('price') as $error)
-                    <span class="error-message">{{ $error }}</span>
+                    <span class="register__form--error-message">{{ $error }}</span>
                     @endforeach
                     @endif
                 </div>
@@ -38,7 +38,7 @@
                     <input type="file" name="image">
                     @if ($errors->has('image'))
                     @foreach ($errors->get('image') as $error)
-                    <span class="error-message">{{ $error }}</span>
+                    <span class="register__form--error-message">{{ $error }}</span>
                     @endforeach
                     @endif
                 </div>
@@ -52,7 +52,7 @@
                     </div>
                     @if ($errors->has('season'))
                     @foreach ($errors->get('season') as $error)
-                    <span class="error-message">{{ $error }}</span>
+                    <span class="register__form--error-message">{{ $error }}</span>
                     @endforeach
                     @endif
                 </div>
@@ -61,7 +61,7 @@
                     <textarea name="description" placeholder="商品の説明を入力">{{old('description')}}</textarea>
                     @if ($errors->has('description'))
                     @foreach ($errors->get('description') as $error)
-                    <span class="error-message">{{ $error }}</span>
+                    <span class="register__form--error-message">{{ $error }}</span>
                     @endforeach
                     @endif
                 </div>

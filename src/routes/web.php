@@ -20,14 +20,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', [ListController::class, 'listView'])->name('listView');
-Route::get('/products/search', [ListController::class, 'search'])->name('search');
-Route::get('/products/search/reset-sort', [ListController::class, 'resetSort'])->name('resetSort');
-Route::get('/products/search/reset-keyword', [ListController::class, 'resetKeyword'])->name('resetKeyword');
+Route::prefix('products')->group(function () {
+    Route::get('/', [ListController::class, 'listView'])->name('listView');
 
-Route::get('/products/register', [RegisterController::class, 'registerView'])->name('registerView');
-Route::post('/products/register', [RegisterController::class, 'register'])->name('register');
+    Route::prefix('search')->group(function () {
+        Route::get('/', [ListController::class, 'search'])->name('search');
+        Route::get('/reset-sort', [ListController::class, 'resetSort'])->name('resetSort');
+        Route::get('/reset-keyword', [ListController::class, 'resetKeyword'])->name('resetKeyword');
+    });
 
-Route::get('/products/{productId}', [DetailController::class, 'detailView'])->name('detailView');
-Route::post('/products/{productId}/update', [DetailController::class, 'update'])->name('update');
-Route::delete('/products/{productId}/delete', [DetailController::class, 'delete'])->name('delete');
+    Route::get('/register', [RegisterController::class, 'registerView'])->name('registerView');
+    Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
+    Route::prefix('{productId}')->group(function () {
+        Route::get('/', [DetailController::class, 'detailView'])->name('detailView');
+        Route::post('/update', [DetailController::class, 'update'])->name('update');
+        Route::delete('/delete', [DetailController::class, 'delete'])->name('delete');
+    });
+});
+

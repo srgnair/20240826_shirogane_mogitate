@@ -29,7 +29,7 @@
                     <option value="high">高い順に表示</option>
                     <option value="low">低い順に表示</option>
                 </select>
-                <div class="sort__modal">
+                <div class="modal">
                     @if(request('keyword'))
                     <form action="{{ route('resetKeyword') }}" method="GET" style="display: inline;">
                         @if(request('sort_by'))
@@ -37,7 +37,7 @@
                         @endif
                         <button>
                             商品名: {{ request('keyword') }}
-                            <span class="reset-icon">&times;</span>
+                            <span class="modal__reset-icon">&times;</span>
                         </button>
                     </form>
                     @endif
@@ -48,7 +48,7 @@
                         @endif
                         <button>
                             高い順に表示
-                            <span class="reset-icon">&times;</span>
+                            <span class="modal__reset-icon">&times;</span>
                         </button>
                     </form>
                     @elseif(request('sort_by') == 'low')
@@ -58,7 +58,7 @@
                         @endif
                         <button>
                             低い順に表示
-                            <span class="reset-icon">&times;</span>
+                            <span class="modal__reset-icon">&times;</span>
                         </button>
                     </form>
                     @endif

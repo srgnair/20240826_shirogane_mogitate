@@ -62,18 +62,18 @@
 }
 
 .custom-checkbox {
-    width: 20px; /* ラジオボタンのサイズを調整 */
-    height: 20px; /* ラジオボタンのサイズを調整 */
-    border-radius: 50%; /* 丸くする */
-    border: 1px solid #333; /* ラジオボタンの枠線の色 */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #333;
     display: inline-block;
-    margin-right: 5px; /* ラベルとラジオボタンの間隔を調整 */
+    margin-right: 5px;
     position: relative;
     vertical-align: middle;
 }
 
 .register__form--select input[type="checkbox"]:checked + label .custom-checkbox {
-    background-color: #333; /* 選択時の背景色 */
+    background-color: #333;
 }
 
 .register__form--select input[type="checkbox"]:checked + label .custom-checkbox::after {
@@ -81,8 +81,8 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    width: 7px; /* チェックマークのサイズ */
-    height: 12px; /* チェックマークのサイズ */
+    width: 7px;
+    height: 12px;
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -144,6 +144,6 @@ input::placeholder, .register__form textarea::placeholder{
     color: #E0DFDE;
 }
 
-.error-message{
+.register__form--error-message{
     color: red;
 }

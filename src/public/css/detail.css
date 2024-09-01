@@ -55,22 +55,22 @@
 }
 
 .detail__top--select input[type="checkbox"] {
-    display: none; /* デフォルトのチェックボックスを非表示にする */
+    display: none; 
 }
 
 .custom-checkbox {
-    width: 20px; /* ラジオボタンのサイズを調整 */
-    height: 20px; /* ラジオボタンのサイズを調整 */
-    border-radius: 50%; /* 丸くする */
-    border: 1px solid #333; /* ラジオボタンの枠線の色 */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #333;
     display: inline-block;
-    margin-right: 5px; /* ラベルとラジオボタンの間隔を調整 */
+    margin-right: 5px;
     position: relative;
     vertical-align: middle;
 }
 
 .detail__top--select input[type="checkbox"]:checked + label .custom-checkbox {
-    background-color: #333; /* 選択時の背景色 */
+    background-color: #333;
 }
 
 .detail__top--select input[type="checkbox"]:checked + label .custom-checkbox::after {
@@ -78,8 +78,8 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    width: 7px; /* チェックマークのサイズ */
-    height: 12px; /* チェックマークのサイズ */
+    width: 7px;
+    height: 12px;
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -102,29 +102,29 @@
     justify-content: center;
 }
 
-.back-button, .register-button{
+.detail__button--back-button, .detail__button--register-button{
     width: 100%;
 }
 
-.back-button{
+.detail__button--back-button{
     margin-right: 15px;
     text-align: right;
 }
 
-.register-button{
+.detail__button--register-button{
     margin-left: 15px;
     text-align: left;
 }
 
-.back-button button{
+.detail__button--back-button button{
 background-color: #E0DFDE;
 }
 
-.register-button button{
+.detail__button--register-button button{
  background-color: #f5c800;
 }
 
-.back-button button, .register-button button {
+.detail__button--back-button button, .detail__button--register-button button {
     border: none;
     outline: none;
     padding: 15px;
@@ -162,7 +162,7 @@ input::placeholder, .detail__description textarea::placeholder{
 }
 
 .register__trash button{
-    position: absolute; /* 絶対位置を設定 */
-    top: -70px; /* 必要に応じて調整 */
+    position: absolute;
+    top: -70px;
     left: 620px;
 }
