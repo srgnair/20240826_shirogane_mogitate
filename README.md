@@ -3,20 +3,26 @@
 ## 環境構築
 
 - Gitディレクトリのクローン
-git clone https://github.com/srgnair/20240826_shirogane_mogitate.git
-cd クローンしたディレクトリ
+
+  `git clone https://github.com/srgnair/20240826_shirogane_mogitate.git`
+
+  `cd クローンしたディレクトリ`
 
 - composerインストールとファイルの編集
-cd src
-composer install
+
+  `cd src`
+  `composer install`
 
 - .envファイルの設定
-cp .env.example .env
-code .
+  
+  `cp .env.example .env`
+  `code .`
 
 - .envファイルの編集
--を削除、+を追加
+  
+  - -を削除、+を追加
 
+```
 DB_CONNECTION=mysql
 -DB_HOST=127.0.0.1
 +DB_HOST=mysql
@@ -27,29 +33,39 @@ DB_PORT=3306
 +DB_DATABASE=laravel_db
 +DB_USERNAME=laravel_user
 +DB_PASSWORD=laravel_pass
+```
 
 - Docker環境のセットアップ
-docker compose up -d
+  
+  `docker compose up -d`
 
 - アプリケーションキーの生成
-docker compose exec php bash
-php artisan key:generate
+
+  `docker compose exec php bash`
+
+  `php artisan key:generate`
 
 - データベースのマイグレーション
-php artisan migrate
+
+  `php artisan migrate`
 
 - シンボリックリンクの設定
-php artisan storage:link
+
+  `php artisan storage:link`
 
 - シーディング
-php artisan db:seed
+
+  `php artisan db:seed`
 
 - 接続
-http://localhost/productsにアクセス
+
+  - `http://localhost/products`にアクセス
 
 - 権限エラーが出る場合
-cd /src
-chmod -R 777 storage bootstrap/cache
+
+  `cd /src`
+
+  `chmod -R 777 storage bootstrap/cache`
 
 
 ## 使用技術（実行環境）
@@ -63,4 +79,4 @@ chmod -R 777 storage bootstrap/cache
 
 
 ## URL
-- 環境開発:http://localhost/
+- 環境開発:`http://localhost/`
