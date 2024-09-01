@@ -81,7 +81,7 @@
                 </div>
                 <div class="register-button">
                     <button type="submit">
-                        変更を保持
+                        変更を保存
                     </button>
                 </div>
             </div>

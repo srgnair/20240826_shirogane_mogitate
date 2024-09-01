@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RegisterRequest;
-use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Season;
-use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -38,6 +36,6 @@ class RegisterController extends Controller
 
         $newProduct->seasons()->attach($request->input('season_ids'));
 
-        return redirect()->route('registerView');
+        return redirect()->route('listView');
     }
 }
