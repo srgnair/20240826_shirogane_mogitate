@@ -19,6 +19,7 @@ class DetailController extends Controller
 
     public function update($productId, DetailRequest $request)
     {
+        dd('abc');
         $productData = $request->except('_token');
         $seasonIds = $request->input('season_ids', []);
 

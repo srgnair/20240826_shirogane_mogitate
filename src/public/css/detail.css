@@ -69,11 +69,11 @@
     vertical-align: middle;
 }
 
-.detail__top--select input[type="checkbox"]:checked + label .custom-checkbox, .custom-checkbox.active {
+.detail__top--select input[type="checkbox"]:checked + label .custom-checkbox {
     background-color: #333; /* 選択時の背景色 */
 }
 
-.detail__top--select input[type="checkbox"]:checked + label .custom-checkbox::after, .custom-checkbox.active::after {
+.detail__top--select input[type="checkbox"]:checked + label .custom-checkbox::after {
     content: "";
     position: absolute;
     top: 40%;
