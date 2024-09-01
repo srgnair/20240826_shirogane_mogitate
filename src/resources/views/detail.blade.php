@@ -43,7 +43,7 @@
                         <div class="checkbox-wrapper">
                             @foreach($seasons as $season)
                             <input type="checkbox" name="season_ids[]" value="{{ $season->id }}" id="{{ $season->id }}">
-                            <label for="{{ $season->id }}"><span class="custom-checkbox"></span>{{ $season->name }}</label>
+                            <label for="{{ $season->id }}"><span class="custom-checkbox @if($product->seasons->contains($season->id)) active @endif"></span>{{ $season->name }}</label>
                             @endforeach
                         </div>
                         @if ($errors->has('season'))
